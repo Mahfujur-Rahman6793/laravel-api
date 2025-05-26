@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class UserApiController extends Controller
 {
@@ -27,17 +28,40 @@ class UserApiController extends Controller
         }
     }
     public function store(Request $request){
-        $data = $request->all();
+         try {
+        $rules = [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required',
+        ];
+
+        $customMessages = [
+            'name.required' => 'Name Is Required',
+            'email.required' => 'Email Is Required',
+            'email.email' => 'Email Must Be Valid',
+            'email.unique' => 'Email Must Be Unique',
+            'password.required' => 'Password Is Required'
+        ];
+
+        $request->validate($rules, $customMessages);
+
         $user = new User();
-        $user->name = $data['name'];
-        $user->email = $data['email'];
-        $user->password = bcrypt($data['password']);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
         $user->save();
-        $response = [
+
+        return response()->json([
             'status' => 'success',
             'data' => $user
-        ];
-        return response()->json($response, 201);
+        ], 201);
+
+    } catch (ValidationException $e) {
+        return response()->json([
+            'status' => 'error',
+            'errors' => $e->errors()
+        ], 422);
+    }
     }
     public function mul_store(Request $request){
         $datas = $request->all();
@@ -87,5 +111,5 @@ class UserApiController extends Controller
         ];
         return response()->json($response, 200);
     }
-        
+
 }
