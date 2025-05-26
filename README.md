@@ -1,9 +1,7 @@
 # 📘 Laravel API Tutorial
 
 🚀 Step 1: Create a Fresh Laravel Project
-
 First, create a fresh Laravel project via Composer or Laravel installer:
-
 ```bash
 composer create-project laravel/laravel laravel-api
 cd laravel-api
