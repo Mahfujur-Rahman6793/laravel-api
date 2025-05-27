@@ -10,6 +10,22 @@
 </head>
 <body>
     <div class="container">
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+
+@endif
+
         <h3>Add product</h3>
         <div class="box-body">
             <form action="{{route('add-product')}}" method="post">
@@ -29,22 +45,22 @@
                             <tr class="more-product">
                                 <td>
                                     <div class="form-control">
-                                        <input type="text" name="name[]" class="form-control" placeholder="Product Name" required>
+                                        <input type="text" name="name[]" class="form-control" placeholder="Product Name">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="form-control">
-                                        <input type="text" name="model[]" class="form-control" placeholder="Product Model" required>
+                                        <input type="text" name="model[]" class="form-control" placeholder="Product Model">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="form-control">
-                                        <input type="text" name="company[]" class="form-control" placeholder="Product Company" required>
+                                        <input type="text" name="company[]" class="form-control" placeholder="Product Company">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="form-control">
-                                        <input type="text" name="price[]" class="form-control" placeholder="Product Price" required>
+                                        <input type="text" name="price[]" class="form-control" placeholder="Product Price">
                                     </div>
                                 </td>
                                 <td>
@@ -54,13 +70,25 @@
                             </tr>
 
                         </tbody>
+                        <tfoot>
+                                <tr>
+                                    <td colspan="5">
+                                        <a role="button" class="btn btn-warning" id="btn_add_product">Add More</a>
+                                    </td>
+
+                                </tr>
+                                </tfoot>
 
                     </table>
-                    <a role="button" class="btn btn-primary" id="btn_add_product">Add More</a>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+
                 </div>
             </form>
 
         </div>
+        .
 
         <template id="template-product">
              <tr class="more-product">
