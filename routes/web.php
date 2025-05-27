@@ -20,5 +20,11 @@ Route::get('/get-district/{city_id}',[WebLocationController::class,'getDistricts
 Route::get('/get-thana/{district_id}',[WebLocationController::class,'getThanas'])->name('get-thana');
 
 // Student using Ajax
+Route::get('/show-student',[StudentController::class,'index'])->name('show-student');
+Route::get('/fetch-student',[StudentController::class,'getStudent'])->name('fetch-student');
 Route::get('/create-student',[StudentController::class,'create'])->name('create-student');
 Route::post('/create-student',[StudentController::class,'store']);
+Route::get('/edit-student/{id}',[StudentController::class,'edit'])->name('student.edit');
+Route::post('/edit-student/{id}',[StudentController::class,'update']);
+Route::get('/delete-student/{id}',[StudentController::class,'destroy'])->name('student.delete');
+
