@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "name": "Dhaka",
+    "districts": [
+      {
+        "id": 1,
+        "name": "Dhaka District",
+        "thanas": [
+          { "id": 1, "name": "Dhanmondi" },
+          { "id": 2, "name": "Mirpur" }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Gazipur",
+        "thanas": [
+          { "id": 3, "name": "Tongi" },
+          { "id": 4, "name": "Kaliakoir" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Chattogram",
+    "districts": [
+      {
+        "id": 3,
+        "name": "Chattogram District",
+        "thanas": [
+          { "id": 5, "name": "Panchlaish" },
+          { "id": 6, "name": "Kotwali" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Rajshahi",
+    "districts": [
+      {
+        "id": 4,
+        "name": "Rajshahi District",
+        "thanas": [
+          { "id": 7, "name": "Boalia" },
+          { "id": 8, "name": "Rajpara" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Khulna",
+    "districts": [
+      {
+        "id": 5,
+        "name": "Khulna District",
+        "thanas": [
+          { "id": 9, "name": "Khalishpur" },
+          { "id": 10, "name": "Sonadanga" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Barishal",
+    "districts": [
+      {
+        "id": 6,
+        "name": "Barishal District",
+        "thanas": [
+          { "id": 11, "name": "Kotwali Model" },
+          { "id": 12, "name": "Bakerganj" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Sylhet",
+    "districts": [
+      {
+        "id": 7,
+        "name": "Sylhet District",
+        "thanas": [
+          { "id": 13, "name": "South Surma" },
+          { "id": 14, "name": "Osmani Nagar" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Mymensingh",
+    "districts": [
+      {
+        "id": 8,
+        "name": "Mymensingh District",
+        "thanas": [
+          { "id": 15, "name": "Muktagacha" },
+          { "id": 16, "name": "Gaffargaon" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Cumilla",
+    "districts": [
+      {
+        "id": 9,
+        "name": "Cumilla District",
+        "thanas": [
+          { "id": 17, "name": "Debidwar" },
+          { "id": 18, "name": "Homna" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Rangpur",
+    "districts": [
+      {
+        "id": 10,
+        "name": "Rangpur District",
+        "thanas": [
+          { "id": 19, "name": "Gangachara" },
+          { "id": 20, "name": "Mithapukur" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Jessore",
+    "districts": [
+      {
+        "id": 11,
+        "name": "Jessore District",
+        "thanas": [
+          { "id": 21, "name": "Abhaynagar" },
+          { "id": 22, "name": "Jhikargacha" }
+        ]
+      }
+    ]
+  }
+]
