@@ -20,3 +20,9 @@ Route::get('/city-details', [LocationController::class, 'cities'])->name('city_d
 Route::get('/cities', [LocationController::class, 'getCities'])->name('cities');
 Route::get('/districts/{city_id}', [LocationController::class, 'getDistricts'])->name('districts');
 Route::get('/thanas/{district_id}', [LocationController::class, 'getThanas'])->name('thanas');
+
+
+// City, District and Thana for postman
+Route::post('/store/cities', [LocationController::class, 'storeCities'])->name('store_cities');
+Route::post('/store/districts', [LocationController::class, 'storeDistricts'])->name('store_districts');
+Route::post('/store/thanas', [LocationController::class, 'storeThanas'])->name('store_thanas');
